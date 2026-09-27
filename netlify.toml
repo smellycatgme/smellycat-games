@@ -1,0 +1,41 @@
+# Netlify Configuration for Smelly Cat Games
+
+[build]
+  publish = "."
+  command = ""
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Cache settings
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "max-age=3600"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "max-age=31536000"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "max-age=31536000"
+
+[[headers]]
+  for = "/*.jpg"
+  [headers.values]
+    Cache-Control = "max-age=31536000"
+
+# Environment
+[context.production.environment]
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
+[context.deploy-preview]
+  command = ""
+
+[context.branch-deploy]
+  command = ""

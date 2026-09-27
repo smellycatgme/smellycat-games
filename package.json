@@ -1,0 +1,21 @@
+{
+  "name": "smelly-cat-games-landing",
+  "version": "1.0.0",
+  "description": "Smelly Cat Games - Official Landing Page",
+  "main": "index.html",
+  "scripts": {
+    "serve": "python -m http.server 8000",
+    "dev": "python -m http.server 3000"
+  },
+  "keywords": [
+    "games",
+    "community",
+    "gaming",
+    "smelly-cat"
+  ],
+  "author": "Smelly Cat Games Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
