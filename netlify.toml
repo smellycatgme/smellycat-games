@@ -1,41 +1,19 @@
-# Netlify Configuration for Smelly Cat Games
-
 [build]
   publish = "."
-  command = ""
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-# Cache settings
+# This is a static site: no build command or dependencies are required.
 [[headers]]
   for = "/*"
   [headers.values]
-    Cache-Control = "max-age=3600"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
 
 [[headers]]
-  for = "/*.js"
+  for = "/css/*.css"
   [headers.values]
-    Cache-Control = "max-age=31536000"
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
-  for = "/*.css"
+  for = "/js/*.js"
   [headers.values]
-    Cache-Control = "max-age=31536000"
-
-[[headers]]
-  for = "/*.jpg"
-  [headers.values]
-    Cache-Control = "max-age=31536000"
-
-# Environment
-[context.production.environment]
-  NETLIFY_NEXT_PLUGIN_SKIP = "true"
-
-[context.deploy-preview]
-  command = ""
-
-[context.branch-deploy]
-  command = ""
+    Cache-Control = "public, max-age=31536000, immutable"
