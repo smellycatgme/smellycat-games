@@ -6,7 +6,7 @@ A mobile-friendly static landing page for Smelly Cat Games.
 
 - Responsive landing page with hero, games, community, token, and signup sections.
 - Existing logo: `Screenshot_20260927_142949_Google(2).jpg`.
-- Contract address intentionally shown as `CA COMING SOON`.
+- Contract address intentionally shown as `HL7eSXzfXWL1Dwx6EueW6Qm3djSF1KbQCXAvdLWErvqj`.
 - Netlify Forms-ready email signup form.
 - `netlify.toml` configured for a zero-build static deployment.
 
